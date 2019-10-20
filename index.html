@@ -23,18 +23,34 @@
     <div class="container">
         <div class="hour-div">
             <div class="row justify-content-center">
-                <div class="col-1 border p-3 time">
+                <div class="col-2 border p-3 time text-center">
                 </div>
                 <textarea class="col-9 border planner text-wrap rows='3' p-3 m-0">
                 </textarea>
-                <div class="col-1 p-4 border bg-primary rounded-right save">
+                <div class="col-1 p-4 border save text-center">
                     <i class="fas fa-save" style="font-size:30px;color:white"></i>
                 </div>
             </div>
         </div>
+        <!-- The Modal -->
+        <div class="modal ">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2 id="modal-text"></h2>
+                    <p id="modal-subtext"></p>
+                    <button id="close-btn">Close</button>
+                </div>
+            </div>
     </div>
-
- 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="./assets/javascript/moment.js"></script>
