@@ -3,4 +3,11 @@
 }
 .text{
     cursor: pointer;
+    border-bottom: 2px solid #cccccc;
+    font-weight: bolder;
+}
+textarea{
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 18px;
+
 }
