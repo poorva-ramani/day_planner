@@ -48,14 +48,12 @@ $(document).ready(function () {
       ]
   };
   
-  //localStorage.setItem('plannerData', JSON.stringify(plannerData));
   var restoredData = JSON.parse(localStorage.getItem('plannerData'));
 
   function renderEvents() {
+     restoredData = JSON.parse(localStorage.getItem('plannerData'));
      localStorage.setItem('plannerData', JSON.stringify(plannerData));
-    //var restoredData = JSON.parse(localStorage.getItem('plannerData'));
     for (var j = 0; j < restoredData.obj.length; j++) {
-      // console.log(restoredData.obj[0].eventDetail)
       $(".planner").eq(j).text(restoredData.obj[j].eventDetail);
     }
   }
