@@ -36,25 +36,28 @@ $(document).ready(function () {
   };
   
   $.each(planner, function (i) {
-    if ($(".time").eq(i).text() === moment().format('h A')) {
+    var timeslot=$(".time").eq(i).text() ;
+    if (timeslot === moment().format('H A')) {
       $(this).css("background-color", "#FE2020");
     }
-    else if ($(".time").eq(i).text() > moment().format('h A')) {
+    else if (moment(timeslot, ["h A"]).format("HH") > moment().format('H A')) {
       $(this).css("background-color", "#96bf21");
     }
-    else if ($(".time").eq(i).text() < moment().format('h A')) {
+    else if (moment(timeslot, ["h A"]).format("HH") < moment().format('H A')) {
       $(this).css("background-color", "#ccc");
     }
   });
 
   function renderEvents() {
     restoredData = JSON.parse(localStorage.getItem('plannerData'));
+    localStorage.setItem('plannerData', JSON.stringify(plannerData));
     console.log()
     for (var j = 0; j < restoredData.obj.length; j++) {
       $(".planner").eq(j).text(restoredData.obj[j].eventDetail);
     }
     localStorage.setItem('plannerData', JSON.stringify(restoredData));
   }
+
 
   $(".save").each(function (i) {
     $(this).on("click", function () {
