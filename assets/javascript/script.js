@@ -58,7 +58,6 @@ $(document).ready(function () {
     localStorage.setItem('plannerData', JSON.stringify(restoredData));
   }
 
-
   $(".save").each(function (i) {
     $(this).on("click", function () {
       var restoredData = JSON.parse(localStorage.getItem('plannerData'));
