@@ -1,7 +1,7 @@
 # Daily Planner 
 This is a daily planner to add important events to manage time effectively.
 
-##Business Context
+## Business Context
 
 1. The application displays timeblocks for standard business hours (9 a.m. to 5 p.m.).
 2. Each timeblock contains a time slot with input field and save button.
